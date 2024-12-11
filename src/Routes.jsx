@@ -22,19 +22,19 @@ export const router = createBrowserRouter([
       element: <HomeLayout />,
     },
     {
-      path: "/network",
+      path: "/home/network",
       element: <ConnectionLayout />,
     },
     {
-      path: "/jobs",
+      path: "/home/jobs",
       element: <Jobs />,
     },
     {
-      path: "/profile",
+      path: "/home/profile",
       element: <ProfileLayout />,
     },
     {
-      path: "/messaging",
+      path: "/home/messaging",
       element: <Messaging />,
     },
 

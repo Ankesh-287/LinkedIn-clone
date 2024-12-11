@@ -134,7 +134,7 @@ function LoginComponent() {
 
 
           <Typography display="flex" justifyContent="center" style={{ color: "grey.300" }}>
-            New to LinkedIn?&nbsp;<Link onClick={() => navigate('/signup')} style={{ textDecoration: 'none' }}> Join now</Link>
+            New to LinkedIn?&nbsp;<Link onClick={() => navigate('/signup')} style={{ textDecoration: 'none', cursor: 'pointer' }}> Join now</Link>
           </Typography>
         </Stack>
       </Box>

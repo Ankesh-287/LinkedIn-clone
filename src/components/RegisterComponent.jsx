@@ -154,7 +154,7 @@ function RegisterComponent() {
 
 
           <Typography display="flex" justifyContent="center" style={{ color: "grey.300" }}>
-            Already on LinkedIn?&nbsp;<Link onClick={() => navigate('/')} style={{ textDecoration: 'none' }}> Sign In</Link>
+            Already on LinkedIn?&nbsp;<Link onClick={() => navigate('/')} style={{ textDecoration: 'none', cursor: 'pointer' }}> Sign In</Link>
           </Typography>
 
           <Typography display="flex" justifyContent="center" style={{ color: "grey.300" }}>
