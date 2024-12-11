@@ -6,7 +6,7 @@ import HomeLayout from "./Layouts/HomeLayout";
 import Jobs from "./Pages/Jobs.jsx";
 import ProfileLayout from "./Layouts/ProfileLayout";
 import Messaging from './Pages/Messaging.jsx'
-import ConnectionLayout from "../Layouts/ConnectionLayout.jsx";
+import ConnectionLayout from "./Layouts/ConnectionLayout.jsx";
 
 export const router = createBrowserRouter([
     {
