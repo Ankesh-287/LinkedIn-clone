@@ -45,7 +45,7 @@ function ProfileMenu() {
                     </Grid>
                     <Grid item xs={12} zIndex="12" display="flex" justifyContent="center" sx={{ borderBottom: '2px solid', borderColor: 'grey.200', pb: 1 }}>
                         <Button
-                        href="home/profile"
+                        href="/profile"
                             sx={{
                                 width: '90%',
                                 color: '#0274b3',

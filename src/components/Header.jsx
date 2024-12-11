@@ -42,7 +42,7 @@ function Header({ currentUser }) {
   })
   const handleIconClick = (iconName) => {
     setSelectedIcon(iconName);
-    navigate(`${iconName}`);
+    navigate(`/${iconName}`);
   };
 
   const handleSearchChange = (event) => {
@@ -97,10 +97,10 @@ function Header({ currentUser }) {
   const navItems = [
     { icon: <Search />, label: 'Search', name: 'search', onClick: handleSearchClick },
     { icon: <Home />, label: 'Home', name: 'home' },
-    { icon: <Group />, label: 'Network', name: 'home/network' },
-    { icon: <Work />, label: 'Jobs', name: 'home/jobs' },
-    { icon: <TextsmsRounded />, label: 'Messaging', name: 'home/messaging' },
-    { icon: <NotificationsRounded />, label: 'Notifications', name: 'home/notifications' },
+    { icon: <Group />, label: 'Network', name: 'network' },
+    { icon: <Work />, label: 'Jobs', name: 'jobs' },
+    { icon: <TextsmsRounded />, label: 'Messaging', name: 'messaging' },
+    { icon: <NotificationsRounded />, label: 'Notifications', name: 'notifications' },
     { icon: <AccountCircleRounded />, label: 'Profile', name: 'profile', onClick: handleShowOptions },
     { icon: <Apps />, label: 'For Business', name: 'apps' },
     { icon: <WorkspacePremium />, label: 'Try Premium', name: 'premium' },

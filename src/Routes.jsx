@@ -6,7 +6,7 @@ import HomeLayout from "./Layouts/HomeLayout";
 import Jobs from "./Pages/Jobs.jsx";
 import ProfileLayout from "./Layouts/ProfileLayout";
 import Messaging from './Pages/Messaging.jsx'
-import ConnectionLayout from "./Layouts/ConnectionLayout.jsx";
+import ConnectionLayout from "../Layouts/ConnectionLayout.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -22,19 +22,19 @@ export const router = createBrowserRouter([
       element: <HomeLayout />,
     },
     {
-      path: "/home/network",
+      path: "/network",
       element: <ConnectionLayout />,
     },
     {
-      path: "/home/jobs",
+      path: "/jobs",
       element: <Jobs />,
     },
     {
-      path: "/home/profile",
+      path: "/profile",
       element: <ProfileLayout />,
     },
     {
-      path: "/home/messaging",
+      path: "/messaging",
       element: <Messaging />,
     },
 

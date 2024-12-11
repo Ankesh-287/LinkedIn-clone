@@ -137,7 +137,7 @@ function PostUpdate({ currentUser }) {
                     >
                       <p
                         onClick={() =>
-                          navigate('/home/profile', {
+                          navigate('/profile', {
                             state: { id: posts?.userId, email: posts.userEmail },
                           })
                         }>
