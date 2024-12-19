@@ -120,21 +120,21 @@ export const likePost = async (userId, postId, liked) => {
     }
 };
 
-// export const commentPost = async (userId, postId, comment) => {
-//     try{
-//         let docToComment = doc(commentRef, `${postId}_${userId}`);
-//         if(comment) {
-//             await deleteDoc(docToComment);
-//             toast.success("Comment removed");
-//         }else {
-//             await setDoc(docToComment, { userId, postId });
-//             toast.success("Post Comment");
-//         }
-//     } catch (err) {
-//         toast.error("Failed to comment");
-//         console.log(err);
-//     }
-// }
+export const commentPost = async (userId, postId, comment) => {
+    try{
+        let docToComment = doc(commentRef, `${postId}_${userId}`);
+        if(comment) {
+            await deleteDoc(docToComment);
+            toast.success("Comment removed");
+        }else {
+            await setDoc(docToComment, { userId, postId });
+            toast.success("Post Comment");
+        }
+    } catch (err) {
+        toast.error("Failed to comment");
+        console.log(err);
+    }
+}
 
 
 export const getLikesByUser = (userId, postId, setLiked, setLikesCount) => {
