@@ -143,12 +143,12 @@ export default function ProfileCard({ onEdit, currentUser }) {
 
 
                   <Grid item xs={12} sm={6} md={6}>
-                    <Typography variant="h5">
+                    <Typography component="div" variant="h5">
                       {Object.values(currentProfile).length === 0
                         ? currentUser.name
                         : currentProfile?.name}
                     </Typography>
-                    <Typography color="grey.700" sx={{ fontSize: '15px' }} >
+                    <Typography component="div" color="grey.700" sx={{ fontSize: '15px' }} >
                       {Object.values(currentProfile).length === 0
                         ? currentUser.headline
                         : currentProfile?.headline}
@@ -162,9 +162,9 @@ export default function ProfileCard({ onEdit, currentUser }) {
                       color: { xs: 'grey.500', sm: 'grey.900' }
                     }}
                   >
-                    <Typography>{Object.values(currentProfile).length === 0 ? currentUser.company : currentProfile?.company}&nbsp;</Typography>
+                    <Typography component="div">{Object.values(currentProfile).length === 0 ? currentUser.company : currentProfile?.company}&nbsp;</Typography>
 
-                    <Typography>
+                    <Typography component="div">
                       <Box sx={{ display: { xs: 'inline', sm: 'none' } }}>&#8226; </Box>
                       {Object.values(currentProfile).length === 0 ? currentUser.college : currentProfile?.college}</Typography>
                   </Grid>
@@ -172,7 +172,7 @@ export default function ProfileCard({ onEdit, currentUser }) {
                   <Grid item xs={12}>
                     {/* {(currentUser.city || currentUser.country) &&
                   (currentProfile?.city || currentProfile?.country) ? ( */}
-                    <Typography color="grey.500" sx={{ fontSize: '13px' }} >
+                    <Typography component="div" color="grey.500" sx={{ fontSize: '13px' }} >
                       {Object.values(currentProfile).length === 0
                         ? `${currentUser.city}, ${currentUser.country}`
                         : `${currentProfile?.city}, ${currentProfile.country}`}
@@ -194,7 +194,7 @@ export default function ProfileCard({ onEdit, currentUser }) {
                   <Grid item xs={12}>
                     {currentUser.website || currentProfile?.website ? (
                       <Link style={{ textDecoration: "none" }} to={Object.values(currentProfile).length === 0 ? currentUser.website : currentProfile?.website} >
-                        <Typography color="#0a66c2" sx={{ fontSize: '14px', fontWeight: '700' }}>
+                        <Typography component="div" color="#0a66c2" sx={{ fontSize: '14px', fontWeight: '700' }}>
                           Website </Typography>
                       </Link>
                     ) : (
@@ -204,7 +204,7 @@ export default function ProfileCard({ onEdit, currentUser }) {
                   <Grid item xs={12}>
                     <Typography color="grey.500" sx={{ fontSize: '13px' }} >{Object.values(currentProfile).length === 0 ? currentUser.email : currentProfile?.email}</Typography>
                     {currentUser.aboutMe || currentProfile?.aboutMe ? (
-                      <Typography color="grey.500" sx={{ fontSize: '13px' }} >
+                      <Typography component="div" color="grey.500" sx={{ fontSize: '13px' }} >
                         {Object.values(currentProfile).length === 0 ? currentUser.aboutMe : currentProfile?.aboutMe}
                       </Typography>
                     ) : (
@@ -214,7 +214,7 @@ export default function ProfileCard({ onEdit, currentUser }) {
 
                   <Grid item xs={12}>
                     {currentUser.skills || currentProfile?.skills ? (
-                      <Typography color="grey.500" sx={{ fontSize: '13px' }} >{Object.values(currentProfile).length === 0 ? currentUser.skills
+                      <Typography component="div" color="grey.500" sx={{ fontSize: '13px' }} >{Object.values(currentProfile).length === 0 ? currentUser.skills
                         : currentProfile?.skills}</Typography>
                     ) : (
                       <></>
