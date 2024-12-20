@@ -23,11 +23,24 @@ function RegisterComponent() {
     }
   }
 
-  const googleSignIn = () => {
-    let response = GoogleSignInApi();
-    console.log(response);
-    navigate('/home')
-  }
+  const googleSignIn = async () => {
+    try {
+      const response = await GoogleSignInApi(); // Await the result
+      console.log("Google Sign-In Response:", response); // Log for debugging
+      toast.success("Signed in with Google successfully");
+      localStorage.setItem('userEmail', response.user.email); // Store user email
+      postUserData({
+        userId: getUniqueId(),
+        name: response.user.displayName,
+        email: response.user.email,
+      });
+      navigate('/');
+    } catch (error) {
+      console.error("Google Sign-In Error:", error); // Log error for debugging
+      toast.error("Google Sign-In failed. Please try again.");
+    }
+  };
+  
 
   const [showPassword, setShowPassword] = useState(false);
   const handleClickPassword = () => setShowPassword((show) => !show);
