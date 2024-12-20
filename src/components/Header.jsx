@@ -95,7 +95,7 @@ function Header({ currentUser }) {
   });
 
   const navItems = [
-    { icon: <Search />, label: 'Search', name: 'search', onClick: handleSearchClick },
+    { icon: <Search />, label: 'Search', name: 'search', onClick: handleSearchClick, sx: { display: { xs: 'block', md: 'none' } } },
     { icon: <Home />, label: 'Home', name: 'home' },
     { icon: <Group />, label: 'Network', name: 'network' },
     { icon: <Work />, label: 'Jobs', name: 'jobs' },
@@ -245,7 +245,7 @@ function Header({ currentUser }) {
               />
             ) : (
               <Box sx={{ display: 'flex', width: '100%', justifyContent: 'space-evenly' }}>
-                {navItems.map(({ icon, label, name, onClick }) => (
+                {navItems.map(({ icon, label, name, onClick, sx: customSx }) => (
                   <Box
                     key={name}
                     onClick={onClick || (() => handleIconClick(name))}
@@ -255,7 +255,10 @@ function Header({ currentUser }) {
                     alignItems="center"
                     paddingY="4px"
                     paddingX="11px"
-                    sx={selectedIcon === name ? selectedStyle : iconStyle}
+                    sx={{
+                      ...selectedIcon === name ? selectedStyle : iconStyle,
+                      ...customSx,
+                    }}
                   >
                     {icon}
                     <Typography variant="caption" sx={{ display: { xs: 'none', md: 'flex' } }}>
