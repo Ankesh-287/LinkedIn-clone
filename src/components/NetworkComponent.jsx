@@ -46,7 +46,7 @@ export default function NetWorkComponent({ currentUser }) {
             <Grid container spacing={2}>
               {shuffledUsers.map((user) =>
                 user.id === currentUser.id ? null : (
-                  <Grid item xs={6} sm={4} md={6} lg={3} key={user.id}>
+                  <Grid item xs={6} sm={6} md={4} lg={3} key={user.id}>
                     <ConnectedUsers
                       currentUser={currentUser}
                       user={user}
