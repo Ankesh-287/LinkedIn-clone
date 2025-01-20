@@ -133,7 +133,7 @@ function LikeButton({ userId, postId, currentUser }) {
             <Grid item xs={12} display="flex" alignItems="center" justifyContent="center" gap={2}>
               <Box
                 component="img"
-                src={currentUser?.imageLink}
+                src={currentUser?.imageLink} 
                 alt="user-profile"
                 sx={{
                   width: '40px',
@@ -141,8 +141,11 @@ function LikeButton({ userId, postId, currentUser }) {
                   borderRadius: '50%',
                   objectFit: 'cover'
                 }}
+
+                
               />
-              <Box sx={{ flex: 1, display: 'flex', alignItems: 'center', position: 'relative' }}>
+              <Box sx={{ flex: 1, display: 'flex', alignItems: 'center', position: 'relative' }}> it might be relative to you 
+                
                 <TextField
                   id="input-with-icon-textfield"
                   onChange={handleCommentInput}

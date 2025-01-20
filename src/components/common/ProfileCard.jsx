@@ -75,7 +75,7 @@ export default function ProfileCard({ onEdit, currentUser }) {
 
             <Box
               component="img"
-              src="https://sixweekstraining.com/wp-content/uploads/2017/05/Six-Weeks-Training-in-Web-Development-1.jpg"
+              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.canva.com%2Flinkedin-banners%2Ftemplates%2F&psig=AOvVaw32qsLB1W3EWWTFTFT524Zp&ust=1737463388830000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMjDz9SphIsDFQAAAAAdAAAAABAE"
               alt="profile background"
               width="100%"
               style={{ borderRadius: '8px 8px 0 0', }} />
