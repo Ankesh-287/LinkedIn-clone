@@ -108,7 +108,7 @@ export default function ProfileCard({ onEdit, currentUser }) {
                   top: { xs: '-14%', sm: '-18%', md: '-20%', lg: '-20%' },
                   border: '3px solid white',
                   cursor: 'pointer',
-                  objectFit: 'contain'
+                  objectFit: 'cover'
                 }}
               />
 
