@@ -29,7 +29,7 @@ export default function UserTab({ currentUser }) {
             <Grid item xs={12} display="flex" justifyContent="center" position="relative">
               <Box
                 component="img"
-                src="https://sixweekstraining.com/wp-content/uploads/2017/05/Six-Weeks-Training-in-Web-Development-1.jpg"
+                src="https://marketplace.canva.com/EAFSUH0EweU/1/0/1600w/canva-black-elegant-personal-linkedin-banner-eEN5zzEf5VA.jpg"
                 alt="current user"
                 sx={{
                   width: '100%',

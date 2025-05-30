@@ -5,15 +5,15 @@ import { uploadPostImage } from '../../api/ImageUpload';
 
 import { storage } from "../../firebaseConfig";
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import ReactQuill from 'react-quill'; // For rich text editor
-import 'react-quill/dist/quill.snow.css'; // Editor styles
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 const PostCreate = ({ currentUser }) => {
-  const [text, setText] = useState(''); // Text content
-  const [image, setImage] = useState(null); // Image file
-  const [imageUrl, setImageUrl] = useState(''); // URL of the uploaded image
-  const [uploading, setUploading] = useState(false); // Progress tracking
-  const [progress, setProgress] = useState(0); // Progress bar value
+  const [text, setText] = useState(''); 
+  const [image, setImage] = useState(null);
+  const [imageUrl, setImageUrl] = useState('');
+  const [uploading, setUploading] = useState(false); 
+  const [progress, setProgress] = useState(0); 
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -75,13 +75,10 @@ const PostCreate = ({ currentUser }) => {
         style={{ marginBottom: '20px' }}
       />
 
-      {/* Image Preview */}
       {imageUrl && <img src={imageUrl} alt="Uploaded" style={{ width: '100%', marginBottom: '20px' }} />}
 
-      {/* Upload progress */}
       {uploading && <CircularProgress variant="determinate" value={progress} />}
 
-      {/* File input for image */}
       <input
         type="file"
         accept="image/*"
